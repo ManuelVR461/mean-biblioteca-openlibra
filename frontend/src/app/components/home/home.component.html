@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<section id="books">
+  <div class="container">
+    <div class="row">
+      <div class="col-sx-12 col-sm-6 col-md-6" *ngFor="let book of books">
+        <div class="card-book">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>
+                <img class="img-fluid" src="{{ book.portada }}" alt="">
+              </p>
+              <h4 class="card-title" [routerLink]="['/book', book.idbook]"
+              routerLinkActive="router-link-active">{{ book.titulo }}</h4>
+              <p class="card-text">{{ book.descripcion}}</p>
+              <a href="{{ book.link_amazon }}" class="btn btn-block btn-primary" target="_blank">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
